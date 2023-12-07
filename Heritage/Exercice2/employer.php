@@ -2,7 +2,8 @@
 class Employe{
     protected string $nom;
     protected int $salaire;
-    public function getNom(){return $this->nom;}
+    public function getNom(){return $this->nom;} 
+    // accesseur
     public function getsalaire(){return $this->salaire;}
 
     public function __construct(string $nom, int $salaire){

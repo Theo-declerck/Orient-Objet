@@ -15,7 +15,7 @@ while ($w = true) {
     echo " 1 : Jean Yves. \n";
     echo " 2 : Marie Log. \n";
     $identité = readline("PTDR t'es qui ? \n");
-    if ($identité = 1) {
+    if ($identité == 1) {
         echo "\n
 1 : Afficher mes informations. \n
 2 : Afficher les informations de l'un de mes compte. \n
@@ -167,7 +167,7 @@ while ($w = true) {
             case 6:
                 break;
         }
-    } elseif ($identité == 2) {
+    } elseif ($identité ==2) {
         echo "\n
         1 : Afficher mes informations. \n
         2 : Afficher les informations de l'un de mes compte. \n
@@ -323,5 +323,3 @@ while ($w = true) {
                 echo " Réponse non valide";
             }
     }
-     
-
