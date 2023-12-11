@@ -5,7 +5,7 @@ require_once "humain.php";
 require_once "Chasseur.php";
 
 $lapin1 = new Lapin(true, "Blanc", 4);
-$chasseur1 = new Chasseur("Pompe", "Pierre");
+$chasseur1 = new Chasseur("Fusil à Pompe", "Pierre");
 $lapin1->creer();
 usleep(500000);
 $chasseur1->creer();
