@@ -1,17 +1,11 @@
-<?php require_once "Livre.class.php";
+<?php 
+// require_once "Livre.class.php";
 require_once "LivreManager.class.php";
-
-
-$livre1 = new Livre(1, "HTML 5", 300, "html.jpg");
-$livre2 = new Livre(2, "CSS 3", 350, "css.jpg");
-$livre3 = new Livre(3, "Le Javascript", 250, "js.jpg");
-$livre4 = new Livre(4, "PHP 8", 550, "php.jpg");
+require_once "Model.class.php";
 
 $livreManager = new LivreManager;
-$livreManager ->ajoutlivres($livre1);
-$livreManager ->ajoutlivres($livre2);
-$livreManager ->ajoutlivres($livre3);
-$livreManager ->ajoutlivres($livre4);
+$livreManager-> chargementLivres();
+
 ob_start();
 ?>
 
@@ -24,7 +18,7 @@ ob_start();
     </tr>
     <?php
     for ($i = 0; $i < count($livreManager->getLivre()); $i++) :
-        ?>
+    ?>
         <tr>
             <td><img src="public/images/<?= $livreManager->getLivre()[$i]->getImage() ?>" alt=""></td>
             <td><?= $livreManager->getLivre()[$i]->getTitre() ?></td>
